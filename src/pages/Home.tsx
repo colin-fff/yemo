@@ -3,6 +3,7 @@ import './Home.css'
 
 export default function Home() {
   useEffect(() => {
+    // Smooth scroll for anchor links
     const handleClick = (e: Event) => {
       const target = e.target as HTMLAnchorElement
       if (target.hash) {
@@ -16,10 +17,21 @@ export default function Home() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', handleClick)
     })
+
+    // Load Adsterra Social Bar
+    const script = document.createElement('script')
+    script.src = 'https://pl29359434.profitablecpmratenetwork.com/36/ab/a1/36aba132a22df76c201f1f3ee8435952.js'
+    script.async = true
+    document.body.appendChild(script)
+
     return () => {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.removeEventListener('click', handleClick)
       })
+      // Clean up script on unmount
+      if (script.parentNode) {
+        script.parentNode.removeChild(script)
+      }
     }
   }, [])
 
@@ -121,7 +133,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(tvSeriesJsonLd) }} />
 
-      <div className="min-h-screen bg-neutral-950 text-neutral-100">
+      <div className="min-h-screen bg-neutral-950 text-neutral-100 pb-20">
         {/* Navigation */}
         <nav className="sticky top-0 z-50 bg-neutral-950/98 backdrop-blur-md border-b border-neutral-800 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 py-4">
