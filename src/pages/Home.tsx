@@ -126,10 +126,8 @@ export default function Home() {
         <nav className="sticky top-0 z-50 bg-neutral-950/98 backdrop-blur-md border-b border-neutral-800 shadow-lg">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
-              <a href="/" className="flex items-center gap-2 group">
-                <span className="text-2xl font-black text-red-600 tracking-tight group-hover:text-red-500 transition-colors">MCU Guide</span>
-                <span className="hidden sm:inline text-neutral-600">|</span>
-                <span className="hidden sm:inline text-sm text-neutral-400">Daredevil Born Again</span>
+              <a href="/" className="flex items-center gap-3 group">
+                <img src="/favicon.svg" alt="MCU Guide" className="h-10 w-10 group-hover:scale-110 transition-transform" />
               </a>
               <div className="hidden lg:flex items-center gap-6 text-sm font-medium">
                 <a href="#episodes" className="hover:text-red-400 transition-colors">Episodes</a>
@@ -160,7 +158,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/70 via-neutral-950/85 to-neutral-950" />
             <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/50 to-transparent" />
           </div>
-          <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-32">
+          <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-24">
             <div className="max-w-4xl">
               <div className="flex flex-wrap items-center gap-2 mb-6">
                 <span className="px-4 py-1.5 text-xs font-bold bg-red-600 text-white rounded-full uppercase tracking-wide">Season 2</span>
@@ -1343,7 +1341,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 py-16">
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
               <div>
-                <h3 className="text-2xl font-black text-red-600 mb-4">MCU Guide</h3>
+                <img src="/logo.svg" alt="MCU Guide Logo" className="h-14 w-auto mb-4" />
                 <p className="text-neutral-400 text-sm leading-relaxed mb-4">
                   Your complete source for Daredevil Born Again Season 2 coverage. Episode guides, character analysis, and Season 3 news.
                 </p>
