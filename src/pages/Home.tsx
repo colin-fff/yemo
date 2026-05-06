@@ -29,18 +29,42 @@ export default function Home() {
     mainEntity: [
       {
         '@type': 'Question',
-        name: 'What happens at the end of Daredevil Born Again Season 2?',
+        name: 'When is Daredevil Born Again Season 2 coming out?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The Season 2 finale sees Daredevil teaming up with Jessica Jones and the Punisher to push back against Kingpin\'s martial law. Bullseye, who spent the season struggling with his violent nature, takes a shot at Wilson Fisk with a sniper rifle but ends up hitting Buck Cashman instead. The ending sets up a clear path forward for Season 3, with the resistance fully formed and Fisk\'s grip on the city starting to crack.'
+          text: 'Daredevil Born Again Season 2 premiered on March 24, 2026 on Disney+. All 8 episodes are now streaming. The season released weekly from March through May 2026.'
         }
       },
       {
         '@type': 'Question',
-        name: 'Does Jessica Jones appear in Daredevil Born Again Season 2?',
+        name: 'Will there be a Season 2 of Daredevil Born Again?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. Krysten Ritter returns as Jessica Jones starting in Episode 6. She\'s been living in the suburbs raising a daughter, and her powers have clearly taken a hit. Fisk\'s people come for her at home, which drags her back into the fight. She teams up with Matt to raid an AVTF weapons cache, and by the finale she\'s standing alongside Daredevil and Punisher as part of the resistance.'
+          text: 'Yes! Season 2 has already been released and is streaming on Disney+ now. Season 3 is also confirmed and greenlit for production in 2026.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'How many episodes in Daredevil Born Again Season 2?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Daredevil Born Again Season 2 has 8 episodes total, released weekly on Disney+ from March 24 to May 5, 2026.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Will the Punisher be in Daredevil Born Again Season 2?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, Jon Bernthal returns as Frank Castle/The Punisher in Season 2. He joins forces with Daredevil and Jessica Jones to fight against Kingpin\'s regime.'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'Will Jessica Jones be in Daredevil Born Again Season 2?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! Krysten Ritter returns as Jessica Jones starting in Episode 6 titled "Requiem." She teams up with Matt Murdock to take down Fisk\'s weapons cache.'
         }
       },
       {
@@ -48,95 +72,594 @@ export default function Home() {
         name: 'When does Daredevil Born Again Season 3 come out?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Marvel has already greenlit Season 3, with filming expected to start sometime in 2026. No official release date has been announced yet, but based on the production timeline of previous seasons, a late 2027 premiere on Disney+ seems like the safest bet.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'How does Born Again compare to the Netflix Daredevil series?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Born Again on Disney+ carries a TV-14 rating compared to the Netflix series\' TV-MA, so the violence and language are dialed back a notch. That said, Season 2 finds a much better balance than Season 1 did. The bigger difference is the MCU connectivity \u2014 Born Again is fully embedded in the larger universe, with characters like Jessica Jones and the Punisher crossing over, while the Netflix show largely stayed in its own lane.'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'Does Bullseye get a redemption arc in Season 2?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Wilson Bethel\'s Bullseye gets one of the most complex arcs of the season. Dex is trying to find some kind of balance after everything he\'s done, but his idea of atonement is messy and violent. He takes a shot at Kingpin in the finale, and earlier he saves Governor McCaffrey from an assassination attempt. Whether this counts as "redemption" is up for debate \u2014 he\'s not exactly a hero, but he\'s not the pure villain he was either.'
+          text: 'Season 3 is confirmed and greenlit. Filming begins in 2026 with an expected release in late 2027 on Disney+.'
         }
       }
+    ]
+  }
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: 'Daredevil Born Again Season 2: Complete Episode Guide & Ending Explained',
+    description: 'When does Daredevil Born Again Season 2 come out? Complete guide to all 8 episodes, cast, ending explained, and Season 3 release date. Jessica Jones, Punisher, and Bullseye return.',
+    image: '/images/8_Daredevil_Born_Again_season_2_release.png',
+    datePublished: '2026-03-24',
+    dateModified: '2026-05-06',
+    author: {
+      '@type': 'Organization',
+      name: 'MCU Guide'
+    }
+  }
+
+  const tvSeriesJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'TVSeries',
+    name: 'Daredevil: Born Again',
+    alternateName: 'Daredevil Born Again',
+    description: 'Matt Murdock returns as Daredevil to fight Wilson Fisk who has become Mayor of New York City.',
+    numberOfSeasons: 2,
+    numberOfEpisodes: 8,
+    containsSeason: {
+      '@type': 'TVSeason',
+      seasonNumber: 2,
+      numberOfEpisodes: 8,
+      datePublished: '2026-03-24'
+    },
+    actor: [
+      { '@type': 'Person', name: 'Charlie Cox' },
+      { '@type': 'Person', name: 'Vincent D\'Onofrio' },
+      { '@type': 'Person', name: 'Deborah Ann Woll' },
+      { '@type': 'Person', name: 'Krysten Ritter' },
+      { '@type': 'Person', name: 'Jon Bernthal' }
     ]
   }
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(tvSeriesJsonLd) }} />
 
       <div className="min-h-screen bg-neutral-950 text-neutral-100">
         {/* Navigation */}
-        <nav className="sticky top-0 z-50 bg-neutral-950/95 backdrop-blur-sm border-b border-neutral-800">
-          <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-            <a href="/" className="text-lg font-bold text-red-600 tracking-tight">MCU Guide</a>
-            <div className="hidden md:flex items-center gap-6 text-sm">
-              <a href="#ending" className="hover:text-red-400 transition-colors">Ending</a>
-              <a href="#jessica-jones" className="hover:text-red-400 transition-colors">Jessica Jones</a>
-              <a href="#kingpin" className="hover:text-red-400 transition-colors">Kingpin</a>
-              <a href="#season-3" className="hover:text-red-400 transition-colors">Season 3</a>
-              <a href="#comparison" className="hover:text-red-400 transition-colors">Comparison</a>
-              <a href="#bullseye" className="hover:text-red-400 transition-colors">Bullseye</a>
+        <nav className="sticky top-0 z-50 bg-neutral-950/98 backdrop-blur-md border-b border-neutral-800 shadow-lg">
+          <div className="max-w-7xl mx-auto px-4 py-4">
+            <div className="flex items-center justify-between">
+              <a href="/" className="flex items-center gap-2 group">
+                <span className="text-2xl font-black text-red-600 tracking-tight group-hover:text-red-500 transition-colors">MCU Guide</span>
+                <span className="hidden sm:inline text-neutral-600">|</span>
+                <span className="hidden sm:inline text-sm text-neutral-400">Daredevil Born Again</span>
+              </a>
+              <div className="hidden lg:flex items-center gap-6 text-sm font-medium">
+                <a href="#episodes" className="hover:text-red-400 transition-colors">Episodes</a>
+                <a href="#ending" className="hover:text-red-400 transition-colors">Ending</a>
+                <a href="#jessica-jones" className="hover:text-red-400 transition-colors">Jessica Jones</a>
+                <a href="#kingpin" className="hover:text-red-400 transition-colors">Kingpin</a>
+                <a href="#season-3" className="hover:text-red-400 transition-colors">Season 3</a>
+                <a href="#faq" className="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors">FAQ</a>
+              </div>
+              <button className="lg:hidden p-2 hover:bg-neutral-800 rounded-lg transition-colors">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
             </div>
           </div>
         </nav>
 
         {/* Hero */}
-        <header className="relative border-b border-neutral-800">
-          <div className="absolute inset-0 overflow-hidden">
-            <img src="/images/8_Daredevil_Born_Again_season_2_release.png" alt="Daredevil Born Again Season 2" className="w-full h-full object-cover opacity-20" />
-            <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/60 via-neutral-950/80 to-neutral-950" />
+        <header className="relative border-b border-neutral-800 overflow-hidden">
+          <div className="absolute inset-0">
+            <img
+              src="/images/8_Daredevil_Born_Again_season_2_release.png"
+              alt="Daredevil Born Again Season 2"
+              className="w-full h-full object-cover opacity-15 scale-105"
+              loading="eager"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-neutral-950/70 via-neutral-950/85 to-neutral-950" />
+            <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/50 to-transparent" />
           </div>
-          <div className="relative max-w-6xl mx-auto px-4 py-20 md:py-28">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="px-3 py-1 text-xs font-semibold bg-red-700 text-white rounded-full">Season 2</span>
-              <span className="px-3 py-1 text-xs font-semibold bg-neutral-800 text-neutral-300 rounded-full">Disney+</span>
-              <span className="px-3 py-1 text-xs font-semibold bg-neutral-800 text-neutral-300 rounded-full">Marvel Studios</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
-              Daredevil Born Again <span className="text-red-600">Season 2</span>: Complete Guide
-            </h1>
-            <p className="text-lg md:text-xl text-neutral-400 max-w-3xl leading-relaxed">
-              Season 2 dropped in March 2026 and hit harder than the first. 
-              Kingpin's running New York as mayor, Daredevil's back in the suit, 
-              Jessica Jones finally shows up, and Bullseye's walking a razor-thin line 
-              between villain and something else. Here's everything that went down.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3 text-sm text-neutral-500">
-              <span>Last updated May 2026</span>
-              <span className="text-neutral-700">|</span>
-              <span>Full spoilers ahead</span>
+          <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-32">
+            <div className="max-w-4xl">
+              <div className="flex flex-wrap items-center gap-2 mb-6">
+                <span className="px-4 py-1.5 text-xs font-bold bg-red-600 text-white rounded-full uppercase tracking-wide">Season 2</span>
+                <span className="px-4 py-1.5 text-xs font-semibold bg-neutral-800 text-neutral-200 rounded-full">Disney+</span>
+                <span className="px-4 py-1.5 text-xs font-semibold bg-neutral-800 text-neutral-200 rounded-full">8 Episodes</span>
+                <span className="px-4 py-1.5 text-xs font-semibold bg-green-900/30 text-green-400 border border-green-800 rounded-full">Now Streaming</span>
+              </div>
+              <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-6 leading-[1.1]">
+                Daredevil Born Again <span className="text-red-600 block md:inline">Season 2</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-neutral-300 mb-4 leading-relaxed font-medium">
+                Season 2 dropped in March 2026 and hit harder than the first.
+              </p>
+              <p className="text-lg md:text-xl text-neutral-400 leading-relaxed">
+                Kingpin's running New York as mayor, Daredevil's back in the red suit,
+                Jessica Jones finally shows up, and the Punisher joins the fight.
+                Here's everything that went down in all 8 episodes.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <a href="#episodes" className="px-8 py-4 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg transition-all transform hover:scale-105 shadow-lg">
+                  View Episode Guide
+                </a>
+                <a href="#faq" className="px-8 py-4 bg-neutral-800 hover:bg-neutral-700 text-white font-bold rounded-lg transition-all border border-neutral-700">
+                  Common Questions
+                </a>
+              </div>
+              <div className="mt-8 flex flex-wrap gap-4 text-sm text-neutral-500">
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
+                  </svg>
+                  Last updated May 6, 2026
+                </span>
+                <span className="text-neutral-700">•</span>
+                <span className="flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd" />
+                  </svg>
+                  Full spoilers ahead
+                </span>
+              </div>
             </div>
           </div>
         </header>
 
         {/* Table of Contents */}
-        <section className="border-b border-neutral-800 bg-neutral-900/30">
-          <div className="max-w-6xl mx-auto px-4 py-8">
-            <h2 className="text-lg font-semibold mb-4 text-neutral-300">What's Inside</h2>
+        <section className="border-b border-neutral-800 bg-gradient-to-b from-neutral-900/50 to-neutral-950">
+          <div className="max-w-7xl mx-auto px-4 py-12">
+            <div className="flex items-center gap-3 mb-6">
+              <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+              </svg>
+              <h2 className="text-2xl font-bold text-neutral-200">What's Inside</h2>
+            </div>
             <nav>
-              <ol className="grid md:grid-cols-2 gap-3 text-sm">
-                <li><a href="#ending" className="flex items-start gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-red-800 transition-colors group"><span className="text-red-600 font-bold">01</span><span className="group-hover:text-red-400 transition-colors">Season 2 Ending Explained</span></a></li>
-                <li><a href="#jessica-jones" className="flex items-start gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-red-800 transition-colors group"><span className="text-red-600 font-bold">02</span><span className="group-hover:text-red-400 transition-colors">Jessica Jones Returns</span></a></li>
-                <li><a href="#kingpin" className="flex items-start gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-red-800 transition-colors group"><span className="text-red-600 font-bold">03</span><span className="group-hover:text-red-400 transition-colors">Kingpin as Mayor</span></a></li>
-                <li><a href="#season-3" className="flex items-start gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-red-800 transition-colors group"><span className="text-red-600 font-bold">04</span><span className="group-hover:text-red-400 transition-colors">Season 3 Release Date</span></a></li>
-                <li><a href="#comparison" className="flex items-start gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-red-800 transition-colors group"><span className="text-red-600 font-bold">05</span><span className="group-hover:text-red-400 transition-colors">Born Again vs Netflix</span></a></li>
-                <li><a href="#bullseye" className="flex items-start gap-3 p-3 rounded-lg bg-neutral-900 border border-neutral-800 hover:border-red-800 transition-colors group"><span className="text-red-600 font-bold">06</span><span className="group-hover:text-red-400 transition-colors">Bullseye's Redemption Arc</span></a></li>
+              <ol className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <li>
+                  <a href="#episodes" className="flex items-start gap-4 p-5 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-red-700 hover:bg-neutral-900 transition-all group">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-600/20 text-red-500 font-black text-lg rounded-lg group-hover:bg-red-600 group-hover:text-white transition-all">01</span>
+                    <span className="flex-1 font-semibold group-hover:text-red-400 transition-colors">Complete Episode Guide</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#ending" className="flex items-start gap-4 p-5 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-red-700 hover:bg-neutral-900 transition-all group">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-600/20 text-red-500 font-black text-lg rounded-lg group-hover:bg-red-600 group-hover:text-white transition-all">02</span>
+                    <span className="flex-1 font-semibold group-hover:text-red-400 transition-colors">Season 2 Ending Explained</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#jessica-jones" className="flex items-start gap-4 p-5 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-red-700 hover:bg-neutral-900 transition-all group">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-600/20 text-red-500 font-black text-lg rounded-lg group-hover:bg-red-600 group-hover:text-white transition-all">03</span>
+                    <span className="flex-1 font-semibold group-hover:text-red-400 transition-colors">Jessica Jones Returns</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#kingpin" className="flex items-start gap-4 p-5 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-red-700 hover:bg-neutral-900 transition-all group">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-600/20 text-red-500 font-black text-lg rounded-lg group-hover:bg-red-600 group-hover:text-white transition-all">04</span>
+                    <span className="flex-1 font-semibold group-hover:text-red-400 transition-colors">Kingpin as Mayor</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#season-3" className="flex items-start gap-4 p-5 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-red-700 hover:bg-neutral-900 transition-all group">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-600/20 text-red-500 font-black text-lg rounded-lg group-hover:bg-red-600 group-hover:text-white transition-all">05</span>
+                    <span className="flex-1 font-semibold group-hover:text-red-400 transition-colors">Season 3 Release Date</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#faq" className="flex items-start gap-4 p-5 rounded-xl bg-neutral-900/80 border border-neutral-800 hover:border-red-700 hover:bg-neutral-900 transition-all group">
+                    <span className="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-red-600/20 text-red-500 font-black text-lg rounded-lg group-hover:bg-red-600 group-hover:text-white transition-all">06</span>
+                    <span className="flex-1 font-semibold group-hover:text-red-400 transition-colors">FAQ & Questions</span>
+                  </a>
+                </li>
               </ol>
             </nav>
           </div>
         </section>
 
-        <main className="max-w-6xl mx-auto px-4 py-12">
+        <main className="max-w-7xl mx-auto px-4 py-16">
+
+          {/* Episode Guide Section */}
+          <section id="episodes" className="mb-16 scroll-mt-20">
+            <span className="text-red-600 text-sm font-semibold uppercase tracking-wider">Season 2 Episodes</span>
+            <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-8">
+              Complete Episode Guide
+            </h2>
+            <p className="text-neutral-400 text-lg leading-relaxed mb-10">
+              All 8 episodes of Daredevil: Born Again Season 2, with detailed breakdowns of key plot points,
+              character developments, and major reveals.
+            </p>
+
+            <div className="space-y-6">
+              {/* Episode 1 */}
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+                <summary className="flex items-start gap-4 p-6 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-900/30 border border-red-800 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl font-bold text-red-500">01</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-red-400 transition-colors">The Northern Star</h3>
+                    <p className="text-sm text-neutral-500">Air Date: March 24, 2026</p>
+                    <p className="text-neutral-400 mt-2 line-clamp-2">Wilson Fisk is firmly entrenched as Mayor. Matt infiltrates a weapons smuggling operation while a mysterious CIA operative arrives in New York.</p>
+                  </div>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-6 pt-0 border-t border-neutral-800">
+                  <div className="prose-content">
+                    <h4>Overview</h4>
+                    <p>The season opens with Wilson Fisk firmly entrenched as Mayor of New York, having transformed the city into a police state under his "Safer Streets Initiative." Matt Murdock is in hiding but has rekindled his romantic relationship with Karen Page, continuing to operate as Daredevil from the shadows.</p>
+
+                    <h4>Key Plot Points</h4>
+                    <ul>
+                      <li><strong>The Ship Heist:</strong> Matt infiltrates a freighter called the Northern Star on the East River, discovering Fisk is smuggling military-grade weapons. He sinks the ship, exposing Fisk's illegal arms operation to the public.</li>
+                      <li><strong>The CIA Enters:</strong> A mysterious man named Mr. Charles (Matthew Lillard), claiming to be a CIA representative from Washington D.C., arrives in New York. He meets directly with Fisk and uses his connection to CIA Director Valentina Allegra de Fontaine to shut down investigations by the State Attorney General and Deputy Mayor against Fisk.</li>
+                      <li><strong>Bullseye's Rescue:</strong> The Anti-Vigilante Task Force (AVTF) raids Cherry's apartment, subdues Matt, and unmasks him. Before they can execute him, Dex (Bullseye) snipes every AVTF agent from a distance, leaving a knife engraved with "You're welcome."</li>
+                      <li><strong>Heather's Descent:</strong> Dr. Heather Glenn, suffering from severe PTSD after the Muse attack in Season 1, begins hallucinating. She accepts Fisk's appointment to run the city's mental health department and falsifies psychiatric evaluations for prisoners like Swordsman (Jacques Duquesne) to aid Fisk's political persecution.</li>
+                      <li><strong>The Hacker War:</strong> BB Urich produces a pro-Fisk show called The BB Report while secretly feeding intelligence to Karen. Meanwhile, a mysterious hacker hijacks the broadcast to mock Fisk with an animated "Mayor Kingpin" caricature.</li>
+                    </ul>
+
+                    <h4>Episode Analysis</h4>
+                    <p>
+                      The season premiere wastes no time establishing the new status quo. Fisk isn't hiding anymore. He's the mayor, he's got federal backing, and he's turned New York into his personal police state. Matt's reduced to guerrilla tactics, which is exactly where Fisk wants him—desperate, isolated, and easy to paint as a terrorist.
+                    </p>
+                    <p>
+                      Matthew Lillard's Mr. Charles is the real curveball here. He's not just some CIA suit—he's got Valentina Allegra de Fontaine on speed dial, which means Fisk's corruption goes way beyond city hall. The show's connecting dots to the wider MCU, but it's doing it smart. This isn't a cameo for cameo's sake. It's showing us that the rot goes all the way to the top.
+                    </p>
+                    <p>
+                      Then there's Bullseye saving Matt's life. That knife with "You're welcome" carved into it? Chef's kiss. Dex isn't playing hero. He's playing a sick game where only he gets to kill Daredevil. It's possessive, it's twisted, and it sets up the most interesting dynamic of the season. Wilson Bethel's performance here is unhinged in the best way.
+                    </p>
+                    <p>
+                      Heather Glenn's storyline is the slow-burn horror of the season. She's not evil—she's broken. That Muse mask she keeps holding? It's not a trophy. It's a mirror. Every time she looks at it, she's seeing the person she's becoming. By the time she accepts Fisk's job offer, you know she's already lost.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              {/* Episode 2 */}
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+                <summary className="flex items-start gap-4 p-6 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-900/30 border border-red-800 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl font-bold text-red-500">02</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-red-400 transition-colors">Shoot the Moon</h3>
+                    <p className="text-sm text-neutral-500">Air Date: March 31, 2026</p>
+                    <p className="text-neutral-400 mt-2 line-clamp-2">Fisk tightens his grip on the city. Matt and Karen attempt to build a resistance network as trust becomes a dangerous currency.</p>
+                  </div>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-6 pt-0 border-t border-neutral-800">
+                  <div className="prose-content">
+                    <h4>Overview</h4>
+                    <p>Fisk tightens his grip on the city, forcing Matt and Karen to attempt building a resistance network. However, trust becomes a dangerous currency as old enemies resurface and new alliances are tested.</p>
+
+                    <h4>Key Plot Points</h4>
+                    <ul>
+                      <li><strong>Cherry in the Hospital:</strong> Cherry suffers a heart attack after being beaten by the AVTF. Bullseye later massacres an AVTF hit squad inside the hospital elevator to prevent them from finishing the job.</li>
+                      <li><strong>Fisk's Propaganda:</strong> Fisk publicly declares Matt Murdock a hero who once saved his life, reframing him as a victim of Bullseye rather than a vigilante. "Hero" posters of Matt appear across the city, effectively baiting him to reveal himself.</li>
+                      <li><strong>Dex's Confession:</strong> Dex enters a church seeking absolution. Blue light flashes around him—a visual manifestation of his fractured psyche adopting a "superhero" delusion, confirming his full transformation into the comic-book Bullseye persona.</li>
+                      <li><strong>The Grocery Store Raid:</strong> AVTF agents indiscriminately arrest civilians in a grocery store. Soledad, Angela del Toro's aunt, is arrested for "assaulting an officer" when she tries to intervene. Upon learning this, Assistant DA Kristen McDuffie gives Angela Hector Ayala's White Tiger suit and equipment.</li>
+                      <li><strong>A Spy in the AVTF:</strong> Matt and Karen interrogate a captured young AVTF member, discovering he is a sympathizer who infiltrated the task force voluntarily. He provides a keycard to the vigilante prison.</li>
+                      <li><strong>BB's Secret Revealed:</strong> It is revealed that BB Urich is the creator of the anti-Fisk "Phisk" hack videos, avenging her uncle Ben Urich's murder by Fisk.</li>
+                    </ul>
+
+                    <h4>Episode Analysis</h4>
+                    <p>
+                      Fisk calling Matt Murdock a hero is the most devious move of the season. He's not lying—Matt did save his life once. But by plastering Matt's face all over the city as a "victim," Fisk's forcing him into an impossible corner. Stay silent and let Fisk control the narrative, or come forward and admit you're Daredevil. Either way, Fisk wins.
+                    </p>
+                    <p>
+                      That hospital elevator scene with Bullseye is brutal. He's not protecting Cherry out of the goodness of his heart. He's eliminating anyone who tries to kill Matt because in Dex's fractured mind, that's his job. The church confession scene drives it home—those blue light flashes aren't just stylistic. They're showing us Dex constructing a superhero identity to justify his violence. He's not a killer anymore. He's a "protector." It's delusional and terrifying.
+                    </p>
+                    <p>
+                      White Tiger's origin hits different because it's not about destiny or great power. Angela del Toro puts on that suit because she's pissed. Her aunt got arrested for standing up to fascist cops, and the system won't do anything about it. So she takes matters into her own hands. That's a more honest superhero origin than most of what Marvel's been putting out.
+                    </p>
+                    <p>
+                      BB Urich being the "Phisk" hacker is perfect. She's using Fisk's own propaganda machine against him, turning his broadcast into a joke. It's guerrilla media warfare, and it's the kind of resistance that actually works in the real world. She's not punching bad guys—she's changing minds. That's her uncle Ben's legacy, updated for the digital age.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              {/* Episode 3 */}
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+                <summary className="flex items-start gap-4 p-6 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-900/30 border border-red-800 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl font-bold text-red-500">03</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-red-400 transition-colors">The Scales & The Sword</h3>
+                    <p className="text-sm text-neutral-500">Air Date: March 31, 2026</p>
+                    <p className="text-neutral-400 mt-2 line-clamp-2">A new threat emerges and the balance of power shifts. Matt leads a daring prison break to free illegally detained vigilantes.</p>
+                  </div>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-6 pt-0 border-t border-neutral-800">
+                  <div className="prose-content">
+                    <h4>Overview</h4>
+                    <p>A new threat emerges, and the balance of power shifts. Matt is forced to confront whether simple resistance is enough to dismantle a system specifically designed to crush opposition.</p>
+
+                    <h4>Key Plot Points</h4>
+                    <ul>
+                      <li><strong>Heather's Breakdown:</strong> Heather continues to hold onto the Muse's mask and has a tense conversation with Kristen McDuffie about Matt and vigilantism, showing her deteriorating mental state.</li>
+                      <li><strong>The Prison Break:</strong> Matt recruits former partner Kirsten McDuffie to help infiltrate the vigilante prison using her prior access. Karen coordinates via walkie-talkie while Angela, now in the White Tiger suit, joins the mission armed.</li>
+                      <li><strong>Swordsman Joins:</strong> Jacques Duquesne (Swordsman) is either exonerated or convicted through Fisk's manipulation (sources vary), and subsequently joins the resistance. Matt, Karen, Angela, and Swordsman storm the prison to free illegally held vigilantes and innocent civilians.</li>
+                      <li><strong>The Northern Star Explodes:</strong> The rescue team successfully evacuates the prisoners in a van, but Fisk orders the destruction of the Northern Star wreckage. He blames the explosion on the "terrorists" they just rescued, doubling down on martial law.</li>
+                    </ul>
+
+                    <h4>Episode Analysis</h4>
+                    <p>
+                      The title "The Scales & The Sword" is about the choice between justice and violence. Matt's spent his whole career trying to use the law—the scales—to take down Fisk. But when the law itself is corrupted, when judges and prosecutors are in Fisk's pocket, what's left? The sword. This prison break is Matt admitting that legal channels are dead.
+                    </p>
+                    <p>
+                      The team dynamic here is messy in the best way. Matt's the idealist, Karen's the strategist, Angela's running on pure rage, and Swordsman's just in it for himself. They're not the Avengers. They're a bunch of desperate people with conflicting motivations, and that tension makes every scene crackle. You're never sure if they're going to pull it off or fall apart.
+                    </p>
+                    <p>
+                      Fisk blowing up the Northern Star wreckage and blaming it on "terrorists" is straight out of the authoritarian playbook. He's not just destroying evidence—he's creating a narrative. The public sees an explosion, sees Fisk pointing at the "vigilantes," and they believe him. That's how propaganda works. It doesn't matter what's true. It matters what people think is true.
+                    </p>
+                    <p>
+                      Heather's conversation with Kristen about Matt is where you see how far gone she is. She's not just traumatized—she's resentful. She blames Matt for not saving her, for not being there, for choosing everyone else over her. That Muse mask isn't just sitting on her shelf anymore. She's talking to it. She's becoming it.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              {/* Episode 4 */}
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+                <summary className="flex items-start gap-4 p-6 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-900/30 border border-red-800 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl font-bold text-red-500">04</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-red-400 transition-colors">Gloves Off</h3>
+                    <p className="text-sm text-neutral-500">Air Date: April 7, 2026</p>
+                    <p className="text-neutral-400 mt-2 line-clamp-2">Bullseye fully embraces his villain identity. Daredevil and Bullseye face off in a spectacular fight that leaves Fisk wounded.</p>
+                  </div>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-6 pt-0 border-t border-neutral-800">
+                  <div className="prose-content">
+                    <h4>Overview</h4>
+                    <p>Bullseye is truly "unleashed," and the emotional and political stakes deepen as personal histories collide with present-day conflicts. The episode explores the cost of vengeance.</p>
+
+                    <h4>Key Plot Points</h4>
+                    <ul>
+                      <li><strong>Bullseye Unleashed:</strong> Dex fully embraces his comic-book supervillain identity, donning his mask and displaying a "new level of insanity." His morning routine and current plans are revealed in chilling detail.</li>
+                      <li><strong>Fisk's Boxing Match:</strong> Fisk participates in a charity boxing match and publicly beats his opponent until the man is carried out on a stretcher, openly demonstrating his violent nature to the city.</li>
+                      <li><strong>Swordsman Bails:</strong> Swordsman ducks out at a critical moment, creating a fracture in Matt's alliance when he is needed most.</li>
+                      <li><strong>Major Action Sequences:</strong> Daredevil faces off against Bullseye in a spectacular fight, while Daredevil and Swordsman also showcase their respective combat abilities in separate sequences.</li>
+                      <li><strong>Fisk is Wounded:</strong> A massive battle at the end of the episode leaves Fisk physically changed, potentially altering his capabilities and setting up future conflicts.</li>
+                    </ul>
+
+                    <h4>Episode Analysis</h4>
+                    <p>
+                      "Gloves Off" is a boxing term for when you stop following the rules and just start swinging. That's exactly what happens here. Bullseye puts on the mask and stops pretending he's anything other than a killer. Fisk beats a man half to death on live television and the crowd cheers. Matt's forced to watch his moral code crumble in real time.
+                    </p>
+                    <p>
+                      Dex's morning routine is one of the creepiest sequences of the season. He's making breakfast, brushing his teeth, doing normal human things—but the camera work and the score tell you something's deeply wrong. When he puts on that mask, it's not a disguise. It's the real him. The face underneath is the lie. That's a hell of a character beat.
+                    </p>
+                    <p>
+                      Fisk's charity boxing match is a masterclass in public manipulation. He's not hiding his violence anymore—he's celebrating it. And the city loves him for it. They see "strength" and "passion" where they should see brutality. That's how fascism works. It makes cruelty look like courage.
+                    </p>
+                    <p>
+                      Swordsman bailing when things get hot is the reality check Matt needed. Not everyone's in this for the cause. Some people are just mercenaries, and when the risk outweighs the reward, they're gone. It's a betrayal, sure, but it's also honest. Swordsman never pretended to be a hero.
+                    </p>
+                    <p>
+                      The Daredevil vs. Bullseye fight is everything you want from these two. Matt's fighting defensively, trying to subdue without killing. Dex is going for the throat every single time. It's not just a physical fight—it's a philosophical one. Can you beat someone who has no limits when you've imposed limits on yourself? Matt doesn't have an answer yet.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              {/* Episode 5 */}
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+                <summary className="flex items-start gap-4 p-6 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-900/30 border border-red-800 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl font-bold text-red-500">05</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-red-400 transition-colors">The Grand Design</h3>
+                    <p className="text-sm text-neutral-500">Air Date: April 14, 2026</p>
+                    <p className="text-neutral-400 mt-2 line-clamp-2">The resistance takes shape but internal fractures threaten stability. Extensive flashbacks connect past with present.</p>
+                  </div>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-6 pt-0 border-t border-neutral-800">
+                  <div className="prose-content">
+                    <h4>Overview</h4>
+                    <p>The resistance begins to take shape, but internal fractures threaten its stability. The episode uses extensive flashbacks to connect the past with the present, questioning whether history is doomed to repeat itself.</p>
+
+                    <h4>Key Plot Points</h4>
+                    <ul>
+                      <li><strong>Flashback Narrative:</strong> The story uses extensive flashbacks showing how Fisk met Vanessa and how Matt's relationship with Foggy developed, connecting past with present.</li>
+                      <li><strong>Vanessa's Critical Condition:</strong> After Bullseye's attack in Episode 4, Vanessa is fighting for her life in the hospital while Fisk waits by her side.</li>
+                      <li><strong>AVTF Escalation:</strong> The Anti-Vigilante Task Force intensifies its manhunt for both Daredevil and Bullseye, escalating the city's tension to a breaking point.</li>
+                      <li><strong>Leadership Tested:</strong> Matt is forced to reconsider what leadership means in a city defined by fear. The resistance members clash over differing motivations and past decisions.</li>
+                      <li><strong>The Scariest Kingpin Yet:</strong> This episode establishes what may be "the most terrifying version of Kingpin we have ever seen," as Fisk's brutality reaches unprecedented levels.</li>
+                    </ul>
+
+                    <h4>Episode Analysis</h4>
+                    <p>
+                      "The Grand Design" reveals that none of this was improvised. Fisk's been playing chess while everyone else was playing checkers. The flashbacks show us how he laid the groundwork years ago—every alliance, every betrayal, every public statement was part of a larger plan. He didn't stumble into power. He engineered it.
+                    </p>
+                    <p>
+                      Vanessa's in danger this episode, and that's when you see the real Kingpin. Not the politician, not the crime lord—the man who will burn the entire city down if it means keeping his wife safe. Vincent D'Onofrio plays it with this quiet intensity that's more frightening than any shouting match. When Fisk is calm, that's when you should be scared.
+                    </p>
+                    <p>
+                      Matt's leadership crisis is the emotional core here. He's used to working alone, making his own calls, living with his own consequences. Now he's got people depending on him, and they're not all on the same page. Karen questions his methods. Angela questions his morals. The resistance is fracturing before it's even fully formed, and Matt doesn't know how to hold it together.
+                    </p>
+                    <p>
+                      The "scariest Kingpin yet" isn't about physical threat. It's about legitimacy. When a tyrant has to hide, you can fight him. When a tyrant is the mayor, when he's got the law on his side, when half the city genuinely supports him—how do you fight that? Fisk isn't just powerful. He's right, according to the system. That's what makes him terrifying.
+                    </p>
+                    <p>
+                      The flashbacks cutting into the present-day action create this sense of inevitability. We're watching history repeat itself. Matt and Fisk have done this dance before, and they'll do it again. The question isn't whether Matt can beat Fisk. It's whether he can break the cycle.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              {/* Episode 6 */}
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+                <summary className="flex items-start gap-4 p-6 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-900/30 border border-red-800 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl font-bold text-red-500">06</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-red-400 transition-colors">Requiem</h3>
+                    <p className="text-sm text-neutral-500">Air Date: April 21, 2026</p>
+                    <p className="text-neutral-400 mt-2 line-clamp-2">Vanessa Fisk dies. Jessica Jones makes her surprise return from the suburbs. The resistance moves from underground operations to open street protests.</p>
+                  </div>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-6 pt-0 border-t border-neutral-800">
+                  <div className="prose-content">
+                    <h4>Overview</h4>
+                    <p>The consequences of earlier choices begin to surface, alliances are reshaped, and priorities shift. Vanessa Fisk dies from her injuries, leaving Wilson Fisk in mourning. The surprise return of Jessica Jones injects new energy and cynicism into the resistance.</p>
+
+                    <h4>Key Plot Points</h4>
+                    <ul>
+                      <li><strong>Vanessa's Death:</strong> Vanessa Fisk dies from the injuries sustained in Bullseye's attack. Fisk, dressed in all white while others wear black, attends her funeral and leaves a rose on her casket.</li>
+                      <li><strong>Jessica Jones Returns:</strong> Krysten Ritter reprises her role as Jessica Jones. She's been living in the suburbs raising a daughter named Danielle when AVTF agents raid her home, forcing her back into the fight. She teams up with Matt to raid an AVTF weapons cache.</li>
+                      <li><strong>The Moral Debate:</strong> Matt's unwavering no-kill code leads to a heated argument with Karen over the definitions of justice and survival in a fascist-controlled city.</li>
+                      <li><strong>Fisk is Damaged:</strong> Fisk's operation suffers an "irreversible blow" with Vanessa's death, and cracks begin to appear in his empire as he spirals into grief.</li>
+                      <li><strong>Street Uprising:</strong> The resistance moves from underground operations to open street protests, as public defiance against Fisk's rule becomes visible across the city.</li>
+                      <li><strong>First Major Confrontation:</strong> Kingpin and Daredevil engage in their first significant physical confrontation in a long time, raising the personal stakes between them.</li>
+                    </ul>
+
+                    <h4>Episode Analysis</h4>
+                    <p>
+                      Vanessa's death is the emotional gut-punch of the season. Fisk dressed in all white at the funeral while everyone else wears black is a striking visual choice—he's mourning, but he's also setting himself apart, refusing to conform even in grief. That single rose on the casket is the most vulnerable we've ever seen him.
+                    </p>
+                    <p>
+                      Jessica Jones showing up is the shot in the arm this season needed. She tried to get out. Moved to the suburbs, changed her life, raised a kid named Danielle. But Fisk's goons came knocking anyway, because in this world, there's no such thing as neutral. You're either with the regime or you're a target. Jessica chose her side the moment they threatened her family.
+                    </p>
+                    <p>
+                      The chemistry between Jessica and Matt is electric. She's all cynicism and dark humor, he's all Catholic guilt and moral absolutes. They shouldn't work together, but they do, because underneath the banter, they're both people who can't walk away from a fight even when they should. Krysten Ritter slides back into the role like she never left. That warehouse fight against the AVTF is pure fan service in the best way.
+                    </p>
+                    <p>
+                      Matt and Karen's argument about the no-kill rule is the conversation the show's been building toward all season. Karen's not wrong—in a city where the law is a weapon in Fisk's hands, moral purity is a luxury. But Matt's not wrong either—the moment he starts killing, he becomes what he's fighting against. There's no easy answer, and the show doesn't pretend there is.
+                    </p>
+                    <p>
+                      The street protests mark a turning point. This isn't just a few masked vigilantes anymore. It's a movement. Regular people are standing up, and that's what Fisk can't control. He can arrest Daredevil, he can shut down the media, but he can't arrest an entire city. The resistance is going public, and that changes everything.
+                    </p>
+                    <p>
+                      Fisk without Vanessa is a different animal. She was his anchor, his reason for wanting power in the first place. Now she's gone, and you can see him unraveling. When Matt and Fisk finally throw down, it's not just a fight. It's personal. Fisk tells Matt that New York chose him, that the people want what he's offering. And the worst part? He's not entirely wrong. That's the gut punch. Matt's not just fighting a villain. He's fighting a democratically elected official who genuinely has popular support.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              {/* Episode 7 */}
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+                <summary className="flex items-start gap-4 p-6 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-900/30 border border-red-800 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl font-bold text-red-500">07</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-red-400 transition-colors">The Hateful Darkness</h3>
+                    <p className="text-sm text-neutral-500">Air Date: April 28, 2026</p>
+                    <p className="text-neutral-400 mt-2 line-clamp-2">Matt returns to the courtroom. Bullseye saves the Governor. Matt forgives Dex for murdering Foggy Nelson.</p>
+                  </div>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-6 pt-0 border-t border-neutral-800">
+                  <div className="prose-content">
+                    <h4>Overview</h4>
+                    <p>Matt returns to the courtroom as a lawyer to defend Karen. Fisk's control faces its most direct challenge, and the battle for narrative control becomes the true war. This is the emotional climax before the finale.</p>
+
+                    <h4>Key Plot Points</h4>
+                    <ul>
+                      <li><strong>Matt Returns to Court:</strong> Matt triumphantly returns as a lawyer, appearing in court as part of Karen's defense team, announcing to all of New York that Matt Murdock is alive.</li>
+                      <li><strong>Daniel Blake's Death:</strong> Daniel Blake (Michael Gandolfini) is executed by Buck with a gunshot to the head for refusing to betray BB Urich and withholding information from Fisk. It is one of the season's most tragic sacrifices.</li>
+                      <li><strong>The Governor's Assassination Attempt:</strong> Fisk sends an assassin to kill the Governor, but Dex (Bullseye) intervenes and saves the Governor's life by killing the assassin with a thrown knife. This marks Bullseye's complex evolution from villain to anti-hero.</li>
+                      <li><strong>Matt Forgives Bullseye:</strong> Matt tracks down Dex and forgives him for murdering Foggy Nelson, Father Lantom, and Ray Nadeem. However, Matt makes it clear: "Forgiveness does not mean forgetting," and he still hates Dex for what he did.</li>
+                      <li><strong>Heather's Cruelty:</strong> Heather visits Karen in prison and, in a grossly unprofessional manner, refuses to answer questions about her relationship with Vanessa while prying into Karen's personal life. She cruelly implies Karen may have been abused by her deceased brother Kevin. Karen's calm rebuttal causes Heather to snap and slap the handcuffed Karen across the face.</li>
+                      <li><strong>Matt Shot Again:</strong> In a recurring season tradition, Matt is shot in the leg shortly before the finale, mirroring his gunshot wound at the end of Season 1.</li>
+                    </ul>
+
+                    <h4>Episode Analysis</h4>
+                    <p>
+                      Matt returning to the courtroom is the show coming full circle. He's not Daredevil here—he's Matt Murdock, attorney at law, using the system one more time even though the system's been weaponized against him. It's either incredibly brave or incredibly naive, and the episode never quite tells you which.
+                    </p>
+                    <p>
+                      Daniel Blake's execution is brutal and sudden. Buck just shoots him in the head, no ceremony, no last words. It's a reminder that this isn't a comic book where villains monologue. This is a regime that kills people for not cooperating, and it does it efficiently. Michael Gandolfini plays Blake's final moments with this quiet dignity that makes it hurt even more.
+                    </p>
+                    <p>
+                      Bullseye saving the Governor is the most Bullseye thing possible. He's not doing it because he's good now. He's doing it because in his fractured mind, this is what "heroes" do. He's playing a role, and the fact that it results in something heroic is almost accidental. The show refuses to give him a clean redemption, and that's the right call.
+                    </p>
+                    <p>
+                      Matt forgiving Dex is the emotional climax of their arc. "Forgiveness does not mean forgetting" is such a perfect line because it acknowledges the complexity. Matt can forgive Dex for killing Foggy and still hate him for it. Both things can be true. It's messy and human and exactly what this show does best.
+                    </p>
+                    <p>
+                      Heather slapping Karen in that prison cell is the moment she crosses the line. She's not a victim anymore. She's an abuser. She's using her position to inflict pain on someone who can't fight back, and she's enjoying it. That smile when she looks at the Muse mask later? That's not possession. That's choice. She's becoming the villain willingly.
+                    </p>
+                  </div>
+                </div>
+              </details>
+
+              {/* Episode 8 */}
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-xl overflow-hidden">
+                <summary className="flex items-start gap-4 p-6 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 h-16 bg-red-900/30 border border-red-800 rounded-lg flex items-center justify-center">
+                    <span className="text-2xl font-bold text-red-500">08</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-xl font-bold mb-1 group-hover:text-red-400 transition-colors">The Southern Cross</h3>
+                    <p className="text-sm text-neutral-500">Air Date: May 5, 2026 • Season Finale</p>
+                    <p className="text-neutral-400 mt-2 line-clamp-2">The courtroom showdown. Bullseye's final shot. Matt offers Fisk redemption. Multiple character arcs reach their conclusions.</p>
+                  </div>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-6 pt-0 border-t border-neutral-800">
+                  <div className="prose-content">
+                    <h4>Overview</h4>
+                    <p>All season-long conflicts reach their climax. The final showdown between Matt and Fisk occurs not in the streets, but in a courtroom. Yet the true war is over narrative control and the soul of New York City.</p>
+
+                    <h4>Key Plot Points</h4>
+                    <ul>
+                      <li><strong>The Courtroom Showdown:</strong> Matt Murdock faces Mayor Wilson Fisk in court as a lawyer, not as Daredevil facing Kingpin. Fisk takes the stand as a witness in the most unexpected twist of the season.</li>
+                      <li><strong>Bullseye's Final Shot:</strong> Bullseye attempts to assassinate Fisk in the courtroom, but Buck takes the bullet for him, dying in the process.</li>
+                      <li><strong>Fisk's Broadcast Meltdown:</strong> Fisk appears on television to deliver a speech inciting insurrection among his supporters. However, BB and Angela (White Tiger) hack the broadcast, exposing Fisk's true nature to the entire city.</li>
+                      <li><strong>Matt's Grace:</strong> Matt appears in his Daredevil suit and offers Fisk a deal—a chance at redemption. He tells Fisk, "You are better than this." Fisk roars, "Is that your punishment?!" but ultimately accepts Matt's grace, ending his reign of terror.</li>
+                      <li><strong>Matt's Arrest:</strong> In the aftermath, Matt is arrested at his and Karen's "old spot" and walks into prison in an orange jumpsuit. Cole North and Powell (former AVTF members) are already inside, but Cole nods at Matt, implying he will be an ally in prison.</li>
+                    </ul>
+
+                    <h4>Character Fates</h4>
+                    <ul>
+                      <li>Matt and Karen exchange "I love you" before being separated.</li>
+                      <li>BB receives her uncle Ben Urich's box of press clippings and is welcomed to a new job at the New York Bulletin by Editor-in-Chief Mitchell Ellison.</li>
+                      <li>Jessica Jones returns home to her daughter Danielle.</li>
+                      <li>Mr. Charles (using the alias Mr. Robertson) flies away with Bullseye, arranging black ops work for Dex overseas.</li>
+                      <li>Fisk goes into exile, his reign as mayor ended.</li>
+                      <li>Matt is arrested and walks into prison in an orange jumpsuit. Cole North and Powell (former AVTF members) are already inside, but Cole nods at Matt, implying he will be an ally in prison.</li>
+                    </ul>
+
+                    <h4>Episode Analysis</h4>
+                    <p>
+                      The finale doesn't give you the fight you expect. Matt and Fisk's showdown happens in a courtroom, not a rooftop. It's Matt Murdock vs. Mayor Fisk, lawyer vs. politician, and that's so much more interesting than another hallway brawl. The pen really is mightier than the fist here, and it's a bold choice that pays off.
+                    </p>
+                    <p>
+                      Bullseye taking that shot at Fisk in the courtroom is chaos incarnate. Buck diving in front of the bullet is the only genuinely selfless thing anyone in Fisk's orbit does all season. He dies for a man who probably doesn't deserve it, and that's tragedy in its purest form.
+                    </p>
+                    <p>
+                      BB and Angela hacking Fisk's broadcast is the resistance finally winning the narrative war. Fisk's been controlling the story all season, but in this moment, they take it back. They show the city who he really is, and for once, the truth cuts through the propaganda. It's a small victory, but it's the one that matters most.
+                    </p>
+                    <p>
+                      Matt offering Fisk redemption is either the most Christ-like thing he's ever done or the most foolish. "You are better than this" is a hell of a thing to say to a man who's spent the entire season proving he's not. But that's Matt—he believes in redemption even when it's unearned. Fisk's response, "Is that your punishment?!" is perfect. Being offered grace when you don't want it is its own kind of torture.
+                    </p>
+                    <p>
+                      The biggest twist comes when Matt reveals his secret identity to the public, pulling off his mask in front of everyone. It's a calculated move to disrupt the cycle of violence and corruption. Then he willingly walks into prison, where former AVTF members Cole North and Powell are already incarcerated. Cole's nod suggests Matt will have allies inside, setting up Season 3's prison storyline.
+                    </p>
+                    <p>
+                      Jessica Jones going home to her daughter Danielle provides a quieter ending for her arc. She fought, she survived, and now she gets to go back to the life she was trying to protect. Bullseye heading off with Mr. Charles for black ops work means he's about to become even more dangerous on a global scale.
+                    </p>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <hr className="border-neutral-800 my-12" />
 
           {/* Where Season 1 Left Off - Context */}
           <section className="mb-16">
@@ -418,11 +941,12 @@ export default function Home() {
             <header className="mb-8">
               <span className="text-red-600 text-sm font-semibold uppercase tracking-wider">Future Updates</span>
               <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4" itemProp="name">
-                Daredevil Born Again Season 3: Everything We Know
+                When is Daredevil Born Again Season 3 Coming Out?
               </h2>
               <p className="text-neutral-400 text-lg leading-relaxed" itemProp="description">
-                Season 3 is already greenlit. Here's what we know about the release window, 
-                returning cast, and where the story might go next.
+                Is there going to be a Season 3? Yes! When will Daredevil Born Again Season 3 come out?
+                Season 3 is already greenlit and filming begins in 2026. Here's everything we know about
+                the release window, returning cast, and where the story might go next.
               </p>
             </header>
 
@@ -660,81 +1184,111 @@ export default function Home() {
             <div className="space-y-4">
               <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
                 <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <span className="font-semibold text-lg pr-4">When is Daredevil Born Again Season 2 coming out?</span>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
+                  Daredevil Born Again Season 2 premiered on March 24, 2026 on Disney+. When does Season 2 of Daredevil Born Again come out? It's already streaming now with all 8 episodes available. The season released with a weekly episode schedule from March through May 2026.
+                </div>
+              </details>
+
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <span className="font-semibold text-lg pr-4">Will there be a Season 2 of Daredevil Born Again?</span>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
+                  Yes! Is there a Season 2 of Daredevil Born Again? Absolutely. Season 2 was renewed and has already been released. Will Daredevil Born Again have a Season 2? It does—and it's streaming on Disney+ right now. Has Daredevil Born Again been renewed for Season 2? Yes, and Season 3 is also confirmed.
+                </div>
+              </details>
+
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <span className="font-semibold text-lg pr-4">How many episodes in Daredevil Born Again Season 2?</span>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
+                  Daredevil Born Again Season 2 has 8 episodes total. The season ran from March 24 to May 5, 2026, with new episodes releasing weekly on Tuesdays. Episodes 2 and 3 were released together as a double drop on March 31.
+                </div>
+              </details>
+
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <span className="font-semibold text-lg pr-4">Will the Punisher be in Daredevil Born Again Season 2?</span>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
+                  Yes, the Punisher appears in Season 2. Is Punisher in Daredevil Born Again Season 2? Jon Bernthal returns as Frank Castle/Punisher and joins forces with Daredevil and Jessica Jones to fight against Kingpin's regime. Will Jon Bernthal be in Daredevil Born Again Season 2? Yes, he's back.
+                </div>
+              </details>
+
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <span className="font-semibold text-lg pr-4">Will Jessica Jones be in Daredevil Born Again Season 2?</span>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
+                  Yes! Krysten Ritter returns as Jessica Jones in Episode 6 titled "Requiem." She's been living in the suburbs with her daughter Danielle when the AVTF raids her home, forcing her back into action. Jessica teams up with Matt Murdock to take down Fisk's weapons cache.
+                </div>
+              </details>
+
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <span className="font-semibold text-lg pr-4">Will Foggy be in Daredevil Born Again Season 2?</span>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
+                  Foggy Nelson (Elden Henson) appears in flashbacks throughout Season 2, particularly in Episode 5 "The Grand Design." Is Foggy in Daredevil Born Again Season 2? Yes, but primarily through memories as Matt reflects on their friendship and Foggy's death in Season 1.
+                </div>
+              </details>
+
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                  <span className="font-semibold text-lg pr-4">Will the Defenders be in Daredevil Born Again Season 2?</span>
+                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
+                </summary>
+                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
+                  Season 2 brings back Jessica Jones and hints at Luke Cage's return. While not a full Defenders reunion, the season sets up the team for Season 3. Daredevil, Jessica Jones, and Punisher form a resistance by the finale, laying groundwork for a larger team-up.
+                </div>
+              </details>
+
+              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
+                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
                   <span className="font-semibold text-lg pr-4">What happens at the end of Daredevil Born Again Season 2?</span>
                   <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
                 </summary>
                 <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
-                  The finale brings Daredevil, Jessica Jones, and the Punisher together as a resistance against Kingpin's martial law. Bullseye takes a sniper shot at Fisk but hits Buck Cashman instead. The ending sets up Season 3 as an all-out war for control of New York City.
+                  The Season 2 finale features a courtroom showdown between Matt and Fisk. Bullseye attempts to assassinate Fisk but Buck takes the bullet. Matt reveals his identity as Daredevil publicly and offers Fisk redemption. Matt is arrested and sent to prison, setting up Season 3's storyline.
                 </div>
               </details>
 
               <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
                 <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
-                  <span className="font-semibold text-lg pr-4">When does Jessica Jones appear in Season 2?</span>
+                  <span className="font-semibold text-lg pr-4">When does Daredevil Born Again Season 2 start filming?</span>
                   <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
                 </summary>
                 <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
-                  Krysten Ritter's Jessica Jones first appears in Episode 6. She's been living in the suburbs raising a daughter, but Fisk's Anti-Vigilante Task Force comes for her at home, forcing her back into the fight. By the finale, she's standing alongside Daredevil and Punisher.
+                  Daredevil Born Again Season 2 finished filming in 2025. Is Daredevil Born Again Season 2 filming? No, filming wrapped before the March 2026 premiere. Season 3 is expected to begin production in 2026.
                 </div>
               </details>
 
               <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
                 <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
-                  <span className="font-semibold text-lg pr-4">Is there going to be a Season 3?</span>
+                  <span className="font-semibold text-lg pr-4">Will Luke Cage be in Daredevil Born Again Season 2?</span>
                   <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
                 </summary>
                 <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
-                  Yes. Marvel greenlit Season 3 before Season 2 even premiered. Filming is expected to start in 2026, with a likely release in late 2027. Charlie Cox, Vincent D'Onofrio, and the main cast are expected to return.
+                  Luke Cage does not appear in Season 2, though there are hints at his return. Mike Colter has been spotted on set for Season 3, suggesting Luke Cage will reunite with Jessica Jones in the next season.
                 </div>
               </details>
 
               <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
                 <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
-                  <span className="font-semibold text-lg pr-4">Does Punisher appear in Season 2?</span>
+                  <span className="font-semibold text-lg pr-4">Is there going to be a Daredevil Born Again Season 3?</span>
                   <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
                 </summary>
                 <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
-                  Yes. Jon Bernthal returns as Frank Castle / The Punisher. He operates in the shadows for much of the season before stepping into the light for the finale, where he stands alongside Daredevil and Jessica Jones as part of the resistance against Fisk.
-                </div>
-              </details>
-
-              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
-                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
-                  <span className="font-semibold text-lg pr-4">Is Foggy really dead?</span>
-                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
-                </summary>
-                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
-                  Foggy Nelson was killed by Bullseye in the very first episode of Born Again Season 1. However, Elden Henson is confirmed to appear in Season 2, likely in flashback sequences. Matt Murdock filmed a 2015 flashback scene for Season 2, and Foggy will presumably be part of that. The show hasn't pulled a fake-out — as far as we know, Foggy is dead in the present timeline.
-                </div>
-              </details>
-
-              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
-                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
-                  <span className="font-semibold text-lg pr-4">Does Bullseye become a hero in Season 2?</span>
-                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
-                </summary>
-                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
-                  Not exactly. Bullseye's arc is more complicated than a simple hero turn. He does heroic things — saving Governor McCaffrey, taking a shot at Kingpin — but his motivations are personal rather than altruistic. The show deliberately avoids giving him a clean redemption. He's in a morally gray space, and that's where the character is most interesting.
-                </div>
-              </details>
-
-              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
-                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
-                  <span className="font-semibold text-lg pr-4">Who is Mr. Charles?</span>
-                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
-                </summary>
-                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
-                  Mr. Charles is played by Matthew Lillard (Scooby-Doo, Five Nights at Freddy's). He's a new antagonist who operates on the political stage with influence that rivals Fisk's own. Marvel's Brad Winderbaum described him as "as influential, in many ways, as Fisk is," suggesting he's a major power player in New York's political landscape.
-                </div>
-              </details>
-
-              <details className="group bg-neutral-900 border border-neutral-800 rounded-lg overflow-hidden">
-                <summary className="flex items-center justify-between p-5 cursor-pointer hover:bg-neutral-800/50 transition-colors">
-                  <span className="font-semibold text-lg pr-4">How does Born Again connect to the Netflix shows?</span>
-                  <span className="text-red-600 text-2xl font-light group-open:rotate-45 transition-transform flex-shrink-0">+</span>
-                </summary>
-                <div className="p-5 pt-0 text-neutral-400 leading-relaxed border-t border-neutral-800">
-                  Born Again is a continuation of the Netflix series in the sense that Charlie Cox and Vincent D'Onofrio play the same characters. Foggy's death and the events of Daredevil Season 3 are referenced. However, the show exists in the main MCU continuity now, with characters like Jessica Jones crossing over from the Netflix universe. Think of it as a soft reboot — same characters, new continuity rules.
+                  Yes! Season 3 is confirmed and greenlit. When will Daredevil Born Again Season 3 come out? Expected release is late 2027. Filming begins in 2026 with Charlie Cox, Vincent D'Onofrio, and the main cast returning. The Defenders reunion is also teased for Season 3.
                 </div>
               </details>
             </div>
@@ -785,39 +1339,60 @@ export default function Home() {
         </main>
 
         {/* Footer */}
-        <footer className="border-t border-neutral-800 bg-neutral-950 py-12">
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="grid md:grid-cols-3 gap-8 mb-8">
+        <footer className="border-t border-neutral-800 bg-gradient-to-b from-neutral-950 to-black">
+          <div className="max-w-7xl mx-auto px-4 py-16">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
               <div>
-                <h3 className="text-lg font-bold text-red-600 mb-3">MCU Guide</h3>
-                <p className="text-neutral-500 text-sm">In-depth coverage of Marvel's street-level heroes. No fluff, just what you need to know.</p>
+                <h3 className="text-2xl font-black text-red-600 mb-4">MCU Guide</h3>
+                <p className="text-neutral-400 text-sm leading-relaxed mb-4">
+                  Your complete source for Daredevil Born Again Season 2 coverage. Episode guides, character analysis, and Season 3 news.
+                </p>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Jump To</h4>
-                <nav className="space-y-2 text-sm">
-                  <a href="#ending" className="block text-neutral-500 hover:text-red-400 transition-colors">Ending Explained</a>
-                  <a href="#jessica-jones" className="block text-neutral-500 hover:text-red-400 transition-colors">Jessica Jones</a>
-                  <a href="#kingpin" className="block text-neutral-500 hover:text-red-400 transition-colors">Kingpin as Mayor</a>
-                  <a href="#bullseye" className="block text-neutral-500 hover:text-red-400 transition-colors">Bullseye Arc</a>
+                <h4 className="font-bold text-lg mb-4 text-neutral-200">Quick Links</h4>
+                <nav className="space-y-3 text-sm">
+                  <a href="#episodes" className="block text-neutral-400 hover:text-red-400 transition-colors">Episode Guide</a>
+                  <a href="#ending" className="block text-neutral-400 hover:text-red-400 transition-colors">Ending Explained</a>
+                  <a href="#jessica-jones" className="block text-neutral-400 hover:text-red-400 transition-colors">Jessica Jones Return</a>
+                  <a href="#season-3" className="block text-neutral-400 hover:text-red-400 transition-colors">Season 3 News</a>
+                  <a href="#faq" className="block text-neutral-400 hover:text-red-400 transition-colors">FAQ</a>
                 </nav>
               </div>
               <div>
-                <h4 className="font-semibold mb-3">Tags</h4>
+                <h4 className="font-bold text-lg mb-4 text-neutral-200">Popular Questions</h4>
+                <nav className="space-y-3 text-sm">
+                  <a href="#faq" className="block text-neutral-400 hover:text-red-400 transition-colors">When is Season 2?</a>
+                  <a href="#faq" className="block text-neutral-400 hover:text-red-400 transition-colors">Will Punisher appear?</a>
+                  <a href="#faq" className="block text-neutral-400 hover:text-red-400 transition-colors">Jessica Jones return?</a>
+                  <a href="#faq" className="block text-neutral-400 hover:text-red-400 transition-colors">Season 3 release date?</a>
+                  <a href="#faq" className="block text-neutral-400 hover:text-red-400 transition-colors">How many episodes?</a>
+                </nav>
+              </div>
+              <div>
+                <h4 className="font-bold text-lg mb-4 text-neutral-200">Keywords</h4>
                 <div className="flex flex-wrap gap-2">
-                  <span className="px-3 py-1 text-xs bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">Daredevil</span>
-                  <span className="px-3 py-1 text-xs bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">Kingpin</span>
-                  <span className="px-3 py-1 text-xs bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">Bullseye</span>
-                  <span className="px-3 py-1 text-xs bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">Jessica Jones</span>
-                  <span className="px-3 py-1 text-xs bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">Punisher</span>
-                  <span className="px-3 py-1 text-xs bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">Disney Plus</span>
-                  <span className="px-3 py-1 text-xs bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">Marvel</span>
-                  <span className="px-3 py-1 text-xs bg-neutral-900 border border-neutral-800 rounded-full text-neutral-400">MCU</span>
+                  <span className="px-3 py-1.5 text-xs bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-neutral-400 transition-colors cursor-default">Daredevil Season 2</span>
+                  <span className="px-3 py-1.5 text-xs bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-neutral-400 transition-colors cursor-default">Kingpin Mayor</span>
+                  <span className="px-3 py-1.5 text-xs bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-neutral-400 transition-colors cursor-default">Bullseye</span>
+                  <span className="px-3 py-1.5 text-xs bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-neutral-400 transition-colors cursor-default">Jessica Jones</span>
+                  <span className="px-3 py-1.5 text-xs bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-neutral-400 transition-colors cursor-default">Punisher</span>
+                  <span className="px-3 py-1.5 text-xs bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-neutral-400 transition-colors cursor-default">Disney+</span>
+                  <span className="px-3 py-1.5 text-xs bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 rounded-lg text-neutral-400 transition-colors cursor-default">Marvel MCU</span>
                 </div>
               </div>
             </div>
-            <div className="border-t border-neutral-800 pt-8 text-center text-neutral-600 text-sm">
-              <p>MCU Guide is an independent fan site, not affiliated with Marvel Studios or Disney.</p>
-              <p className="mt-2">All trademarks belong to their respective owners. Major spoilers for Daredevil Born Ahead.</p>
+            <div className="border-t border-neutral-800 pt-8">
+              <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-neutral-500">
+                <p>© 2026 MCU Guide. Independent fan site, not affiliated with Marvel Studios or Disney.</p>
+                <div className="flex gap-6">
+                  <a href="#" className="hover:text-red-400 transition-colors">Privacy</a>
+                  <a href="#" className="hover:text-red-400 transition-colors">Terms</a>
+                  <a href="#" className="hover:text-red-400 transition-colors">Contact</a>
+                </div>
+              </div>
+              <p className="mt-4 text-center text-neutral-600 text-xs">
+                All trademarks and copyrights belong to their respective owners. Contains major spoilers for Daredevil: Born Again Season 2.
+              </p>
             </div>
           </div>
         </footer>
