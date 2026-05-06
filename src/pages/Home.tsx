@@ -3,7 +3,6 @@ import './Home.css'
 
 export default function Home() {
   useEffect(() => {
-    // Smooth scroll for anchor links
     const handleClick = (e: Event) => {
       const target = e.target as HTMLAnchorElement
       if (target.hash) {
@@ -17,21 +16,10 @@ export default function Home() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', handleClick)
     })
-
-    // Load Adsterra Social Bar
-    const script = document.createElement('script')
-    script.src = 'https://pl29359434.profitablecpmratenetwork.com/36/ab/a1/36aba132a22df76c201f1f3ee8435952.js'
-    script.async = true
-    document.body.appendChild(script)
-
     return () => {
       document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.removeEventListener('click', handleClick)
       })
-      // Clean up script on unmount
-      if (script.parentNode) {
-        script.parentNode.removeChild(script)
-      }
     }
   }, [])
 
@@ -265,6 +253,13 @@ export default function Home() {
                 </li>
               </ol>
             </nav>
+          </div>
+        </section>
+
+        {/* Adsterra Native Banner */}
+        <section className="border-b border-neutral-800 bg-neutral-950">
+          <div className="max-w-7xl mx-auto px-4 py-8">
+            <div id="container-e8be50340ae89083cf588609032869f2" className="flex justify-center"></div>
           </div>
         </section>
 
