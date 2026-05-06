@@ -1,0 +1,159 @@
+/* SEO Content Styles */
+.prose-content {
+  max-width: 100%;
+}
+
+.prose-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: #e5e5e5;
+  line-height: 1.3;
+}
+
+.prose-content h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  color: #d4d4d4;
+}
+
+.prose-content p {
+  margin-bottom: 1.25rem;
+  line-height: 1.8;
+  color: #a3a3a3;
+}
+
+.prose-content p strong {
+  color: #d4d4d4;
+}
+
+.prose-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose-content ul li {
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
+  color: #a3a3a3;
+  list-style-type: disc;
+}
+
+.prose-content ul li strong {
+  color: #d4d4d4;
+}
+
+.prose-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-content th {
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid #991b1b;
+  color: #e5e5e5;
+  font-size: 0.875rem;
+}
+
+.prose-content td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #262626;
+  font-size: 0.875rem;
+}
+
+.prose-content tr:hover td {
+  background-color: rgba(64, 64, 64, 0.3);
+}
+
+/* Smooth scroll offset for sticky header */
+.scroll-mt-20 {
+  scroll-margin-top: 5rem;
+}
+
+/* Details/Summary styling for FAQ */
+details summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details > div {
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #404040;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #525252;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(220, 38, 38, 0.3);
+  color: #fff;
+}
+
+/* Focus styles for accessibility */
+a:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #dc2626;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Image hover zoom effect */
+.rounded-xl img {
+  transition: transform 0.3s ease;
+}
+
+.rounded-xl:hover img {
+  transform: scale(1.02);
+}
+
+/* Print styles */
+@media print {
+  nav,
+  footer {
+    display: none;
+  }
+  
+  .prose-content h3 {
+    page-break-after: avoid;
+  }
+  
+  details {
+    break-inside: avoid;
+  }
+}
